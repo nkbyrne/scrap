@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""  This will roll two dice and print out the value of one of them """
 import sys
 from random import randint
 

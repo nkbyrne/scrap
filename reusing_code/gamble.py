@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+""" This will use the dice rolling function of dice.py to roll two dice and
+    print them out in a fun way """
 import sys
 from random import randint
 from termcolor import colored
