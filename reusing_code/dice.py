@@ -2,18 +2,18 @@
 import sys
 from random import randint
 
-die01 = (randint(1, 6))
-die02 = (randint(1, 6))
+die01 = ()
+die02 = ()
 
 
-def playagain():
-    global die01
-    global die02
-    die01 = (randint(1, 6))
-    die02 = (randint(1, 6))
-    answer = input("Roll again (y/n):")
+def rolldice():
+    print()
+    answer = input("Roll Dice? (y/n):")
     if (answer == "y") or (answer == ""):
-        main()
+        die01 = (randint(1, 6))
+        die02 = (randint(1, 6))
+        print(("You rolled a:"), (die01))
+        return die01, die02
     elif answer == "n":
         sys.exit(0)
     else:
@@ -22,8 +22,8 @@ def playagain():
 
 
 def main():
-    print(("You rolled a:"), (die01))
-    playagain()
+    while True:
+        rolldice()
 
 
 if __name__ == "__main__":
