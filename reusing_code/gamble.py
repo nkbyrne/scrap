@@ -9,6 +9,7 @@ from dice import rolldice
 
 def gamble():
     die01, die02 = rolldice()
+    print("You rolled a ", (colored(die01, "yellow")))
     answer = input("Higher or Lower (h/l):")
     if answer == "h" or (answer == ""):
         if die01 < die02:

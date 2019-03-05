@@ -1,10 +1,7 @@
 #!/usr/bin/env python3
-"""  This will roll two dice and print out the value of one of them """
+"""  This will roll two dice and print out the values """
 import sys
 from random import randint
-
-die01 = ()
-die02 = ()
 
 
 def rolldice():
@@ -13,7 +10,7 @@ def rolldice():
     if (answer == "y") or (answer == ""):
         die01 = (randint(1, 6))
         die02 = (randint(1, 6))
-        print(("You rolled a:"), (die01))
+        #print(("You rolled a:"), (die01))
         return die01, die02
     elif answer == "n":
         sys.exit(0)
@@ -23,8 +20,10 @@ def rolldice():
 
 
 def main():
-    while True:
-        rolldice()
+    die01, die02 = rolldice()
+    print("die01 ", die01)
+    print("die02 ", die02)
+    main()
 
 
 if __name__ == "__main__":
